@@ -13,118 +13,105 @@ a {
 
 * {
     box-sizing: border-box;
+    font-family: 'Sora';
+    color: #18181B;
 }
 
-/* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
-    line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
-}
-
-.title {
-    position: relative;
-    text-align: center;
-}
-
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
-}
-
-.logo {
-    display: none;
+    background-color: #FAFAF9;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 50px;
 }
 
 
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
-}
+@media (min-width: 800px) {
+    /* general grid setup, 2 column */
+    body {
+        background-color: yellow;
+        overflow-y: hidden;
 
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
-}
 
-.link-title {
-    font-size: 1.125rem;
-}
+        /*grid display setup*/
+    
+        display: inline-grid;
+        justify-content: center;
+        grid-template-columns: 500px 550px;
+        grid-template-rows: 100vh;
+        grid-column-gap: 32px;
 
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
-}
-
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
     }
 
-    .get-started {
-        width: auto;
+    .col-2 {
+        display: inline-block;
+        align-self: center;
+      
     }
 
-    main {
-        flex-direction: row;
+    h1 {
+        font-size: 36px;
     }
 
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+
+    /* review section styling */
+    section {
+        display: inline-block;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 20px #D4D4D8;
+        width: 350px;
+        height: auto;
+
+        border-radius: 10px;
+        padding: 35px;
+        margin-bottom: 50px;
+
     }
 
-  }
+    section .review {
+        color: #52525A;
+        line-height: 30px;
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+    .section-head {
+        height: 25px;
+        display: flex;
+        vertical-align: middle;
+        
+    }
+
+    .rating {
+        margin-left: 20px;
+
+    }
+
+    .name {
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 15px;
+    }
+
+    .wrap-right {
+        float: right;
+    }
+
+    .wrap-left {
+        float: left;
+    }
+
+
+    .star-pin svg {
+       position: relative;
+    }
+
+    .star-pin img {
+        position: absolute;
+    }
+
+
+
+}
+
+
+
